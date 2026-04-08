@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MICCAI 2026 workshop website for Toward Reliable AI in Hematology: Robust Red Blood Cell and Parasitemia Analysis."
+    />
+    <meta name="theme-color" content="#f6f4f1" />
+    <meta
+      property="og:title"
+      content="Reliable AI in Hematology | MICCAI 2026 Workshop"
+    />
+    <meta
+      property="og:description"
+      content="MICCAI 2026 workshop on robust, fair, and clinically reliable AI for blood smear analysis."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/social-preview.svg" />
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      name="twitter:title"
+      content="Reliable AI in Hematology | MICCAI 2026 Workshop"
+    />
+    <meta
+      name="twitter:description"
+      content="Toward Reliable AI in Hematology: Robust Red Blood Cell and Parasitemia Analysis."
+    />
+    <meta name="twitter:image" content="assets/social-preview.svg" />
+    <title>
+      Reliable AI in Hematology | MICCAI 2026 Workshop
+    </title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem("theme-preference");
+          var theme = storedTheme === "dark" ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (error) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Primary">
+        <a class="brand" href="#home" aria-label="Go to homepage section">
+          <span class="brand-mark" aria-hidden="true">RBC</span>
+          <span class="brand-text">
+            <span class="brand-title">Reliable AI in Hematology</span>
+            <span class="brand-subtitle">MICCAI 2026 Workshop</span>
+          </span>
+        </a>
+
+        <div class="nav-right">
+          <div class="nav-panel" id="site-menu">
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#topics">Topics</a></li>
+              <li><a href="#program">Program</a></li>
+              <li><a href="#speakers">Speakers</a></li>
+              <li><a href="#organizers">Organizers</a></li>
+              <li><a href="#call-for-papers">Call for Papers</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch to dark mode"
+          >
+            <span class="theme-toggle-icon" aria-hidden="true"></span>
+            <span class="theme-toggle-text">Dark mode</span>
+          </button>
+
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Open navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">MICCAI 2026 Workshop</p>
+            <h1>
+              Toward Reliable AI in Hematology: Robust Red Blood Cell and
+              Parasitemia Analysis
+            </h1>
+            <p class="hero-subtitle">
+              A MICCAI 2026 workshop on robust, fair, and clinically reliable
+              AI for blood smear analysis
+            </p>
+            <p class="hero-intro">
+              Red blood cell analysis and parasitemia detection are important
+              tasks in clinical hematology and computational pathology. This
+              workshop focuses on robust and trustworthy AI methods that can
+              generalize across real-world domain shifts, support standardized
+              evaluation, and accelerate clinically meaningful deployment.
+            </p>
+            <p class="hero-context">
+              Held in conjunction with MICCAI 2026. Exact workshop date and
+              venue details are <strong>to be announced</strong>.
+            </p>
+            <div class="hero-meta">
+              <span class="pill">MICCAI 2026 context</span>
+              <span class="pill pill-soft">Details under development</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#call-for-papers">
+                Call for Papers
+              </a>
+              <a class="button button-secondary" href="#program">
+                Program Overview
+              </a>
+            </div>
+          </div>
+
+          <!-- CSS-rendered scientific motif inspired by blood smear microscopy. -->
+          <div
+            class="hero-visual reveal"
+            role="img"
+            aria-label="Abstract scientific illustration inspired by blood smear microscopy, red blood cells, and reliable AI analysis"
+          >
+            <div class="visual-card">
+              <div class="visual-grid" aria-hidden="true"></div>
+              <div class="cell-cluster cell-cluster-a" aria-hidden="true">
+                <span class="cell large"></span>
+                <span class="cell medium"></span>
+                <span class="cell small"></span>
+              </div>
+              <div class="cell-cluster cell-cluster-b" aria-hidden="true">
+                <span class="cell medium"></span>
+                <span class="cell small"></span>
+                <span class="cell large"></span>
+              </div>
+              <div class="signal-panel" aria-hidden="true">
+                <span class="signal-line"></span>
+                <span class="signal-line short"></span>
+                <span class="signal-line"></span>
+                <span class="signal-dot"></span>
+              </div>
+              <div class="analysis-badge">
+                <span class="analysis-label">Reliability Focus</span>
+                <strong>Domain shift, fairness, reproducibility</strong>
+              </div>
+              <svg
+                class="hero-orbit"
+                viewBox="0 0 320 280"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M30 190C88 126 138 84 198 90C245 95 273 131 291 182"
+                  pathLength="100"
+                />
+                <circle cx="66" cy="160" r="5" />
+                <circle cx="160" cy="94" r="6" />
+                <circle cx="255" cy="134" r="5" />
+                <circle cx="287" cy="183" r="7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">About</p>
+            <h2>Building dependable hematology AI</h2>
+            <p>
+              AI methods for red blood cell analysis and blood-borne parasite
+              detection have advanced quickly, yet reliability remains a major
+              barrier to clinical use. Changes in microscopes, staining,
+              illumination, sample preparation, site-specific workflows, and
+              population diversity can all alter performance in ways that matter
+              for care.
+            </p>
+            <p>
+              This workshop brings together researchers working on robustness,
+              fairness, generalization, calibration, and reproducibility to
+              advance clinically relevant, dependable AI for hematology
+              microscopy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="topics">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Topics</p>
+            <h2>Topics of Interest</h2>
+            <p>
+              A focused discussion space for rigorous methods, meaningful
+              evaluation, and translational thinking across hematology image
+              analysis.
+            </p>
+          </div>
+
+          <div class="topic-grid reveal">
+            <article class="topic-card">
+              <h3>Robustness and Domain Shift</h3>
+              <ul class="topic-list">
+                <li>Robustness under domain shift</li>
+                <li>Staining, microscope, scanner, and illumination variability</li>
+                <li>Lab and site variation</li>
+              </ul>
+            </article>
+
+            <article class="topic-card">
+              <h3>Reliable Predictions</h3>
+              <ul class="topic-list">
+                <li>Generalization and uncertainty estimation</li>
+                <li>Calibration and selective prediction</li>
+                <li>Bias measurement and mitigation</li>
+              </ul>
+            </article>
+
+            <article class="topic-card">
+              <h3>Learning Paradigms</h3>
+              <ul class="topic-list">
+                <li>Self-supervised learning for cytology</li>
+                <li>Foundation models for blood image analysis</li>
+                <li>Promptable and interactive segmentation</li>
+              </ul>
+            </article>
+
+            <article class="topic-card">
+              <h3>Phenotyping and Morphology</h3>
+              <ul class="topic-list">
+                <li>RBC morphology analysis</li>
+                <li>Anemia-related phenotypes</li>
+                <li>Dysmorphisms and hemoglobinopathies</li>
+                <li>Sickle cell analysis</li>
+              </ul>
+            </article>
+
+            <article class="topic-card">
+              <h3>Parasitemia Analysis</h3>
+              <ul class="topic-list">
+                <li>Parasitemia detection</li>
+                <li>Malaria and other blood-borne parasites</li>
+              </ul>
+            </article>
+
+            <article class="topic-card">
+              <h3>Benchmarks and Translation</h3>
+              <ul class="topic-list">
+                <li>Benchmarks and reproducibility</li>
+                <li>Standardized evaluation protocols</li>
+                <li>Translational and workflow considerations</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="why">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Why This Workshop</p>
+            <h2>Why this conversation matters now</h2>
+          </div>
+
+          <div class="highlight-grid reveal">
+            <article class="highlight-card">
+              <h3>Reliable AI in the real world</h3>
+              <p>
+                Performance on curated datasets is not enough. The field needs
+                methods that remain dependable across clinical settings and
+                deployment conditions.
+              </p>
+            </article>
+
+            <article class="highlight-card">
+              <h3>Robust hematology microscopy</h3>
+              <p>
+                Blood smear analysis is highly sensitive to acquisition and
+                preparation variability, making robustness and calibration
+                central technical challenges.
+              </p>
+            </article>
+
+            <article class="highlight-card">
+              <h3>Clinical translation</h3>
+              <p>
+                Better tools can support diagnosis, triage, and laboratory
+                workflow only when they align with clinical needs and practical
+                constraints.
+              </p>
+            </article>
+
+            <article class="highlight-card">
+              <h3>Reproducibility and benchmarks</h3>
+              <p>
+                Shared evaluation protocols and rigorous benchmarks are key to
+                comparing methods fairly and moving the field forward
+                credibly.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="program">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Program</p>
+            <h2>Preliminary Program</h2>
+            <p>
+              A focused 120-minute format designed to balance invited context,
+              selected research talks, and discussion.
+            </p>
+            <p class="section-note">
+              <strong>Total duration:</strong> 120 minutes
+            </p>
+          </div>
+
+          <div class="timeline reveal" aria-label="Preliminary workshop program">
+            <article class="timeline-item">
+              <div class="timeline-time">5 min</div>
+              <div class="timeline-body">
+                <h3>Welcome and scope</h3>
+                <p>Opening remarks and workshop framing.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-time">45 min</div>
+              <div class="timeline-body">
+                <h3>Invited talk</h3>
+                <p>Featured invited presentation.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-time">5 min</div>
+              <div class="timeline-body">
+                <h3>Q&amp;A</h3>
+                <p>Audience discussion following the invited talk.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-time">3 x 10 min</div>
+              <div class="timeline-body">
+                <h3>Top-3 oral presentations</h3>
+                <p>Selected peer-reviewed contributions presented orally.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-time">Up to 6 x 1 min</div>
+              <div class="timeline-body">
+                <h3>Poster spotlight pitches</h3>
+                <p>Short previews introducing poster contributions.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-time">25 min</div>
+              <div class="timeline-body">
+                <h3>Poster discussion / networking</h3>
+                <p>Interactive exchange around posters and emerging ideas.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-time">4 min</div>
+              <div class="timeline-body">
+                <h3>Closing remarks and next steps</h3>
+                <p>Wrap-up, outlook, and community follow-up.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="speakers">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Speakers</p>
+            <h2>Invited Speaker TBD</h2>
+            <p>
+              The invited speaker is still being confirmed and will be
+              announced once finalized.
+            </p>
+            <p class="section-note">
+              Only one 45-minute invited talk will be scheduled in the
+              quarter-day format. Final invited speaker selection is subject to
+              availability.
+            </p>
+          </div>
+
+          <div class="speaker-tbd reveal">
+            <div class="speaker-tbd-badge">TBD</div>
+            <p>
+              Speaker details will be published here as soon as the invitation
+              process is completed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-accent" id="call-for-papers">
+        <div class="container">
+          <div class="callout reveal">
+            <div class="callout-copy">
+              <p class="eyebrow">Call for Papers</p>
+              <h2>Call for Papers</h2>
+              <p>
+                We welcome submissions on robust RBC morphology analysis,
+                parasitemia detection, foundation models, self-supervised
+                learning, fairness and generalization, reproducibility and
+                benchmark design, and clinically relevant hematology AI.
+              </p>
+              <p>
+                Submitted papers will undergo peer review, with selected
+                contributions featured as oral presentations and posters.
+              </p>
+              <p>
+                Submission will be handled via EasyChair. The submission link
+                and full instructions will be shared once available.
+              </p>
+              <p class="section-note">
+                Detailed submission instructions and important dates remain
+                <strong>to be announced</strong>. Please stay tuned for updates
+                after <strong>April 10, 2026</strong>.
+              </p>
+            </div>
+            <div class="callout-actions">
+              <a class="button button-primary" href="#contact">
+                Stay tuned for submission details
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="organizers">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Organizers</p>
+            <h2>Organizing Team</h2>
+            <p>
+              The workshop is coordinated by an interdisciplinary team spanning
+              academic research, translational AI, and biomedical image
+              analysis.
+            </p>
+          </div>
+
+          <div class="organizer-grid reveal">
+            <article class="organizer-card">
+              <div class="organizer-media">
+                <img
+                  src="assets/organizers/andrea-loddo.jpg"
+                  alt="Placeholder portrait for Andrea Loddo"
+                  loading="lazy"
+                />
+                <span class="organizer-initials" aria-hidden="true">AL</span>
+              </div>
+              <div class="organizer-body">
+                <p class="organizer-role">General Chair</p>
+                <h3>Andrea Loddo</h3>
+                <p>University of Cagliari</p>
+              </div>
+            </article>
+
+            <article class="organizer-card">
+              <div class="organizer-media">
+                <img
+                  src="assets/organizers/luca-zedda.jpg"
+                  alt="Placeholder portrait for Luca Zedda"
+                  loading="lazy"
+                />
+                <span class="organizer-initials" aria-hidden="true">LZ</span>
+              </div>
+              <div class="organizer-body">
+                <p class="organizer-role">Program Chair · Webmaster</p>
+                <h3>Luca Zedda</h3>
+                <p>University of Cagliari</p>
+              </div>
+            </article>
+
+            <article class="organizer-card">
+              <div class="organizer-media">
+                <img
+                  src="assets/organizers/ario-sadafi.jpg"
+                  alt="Placeholder portrait for Ario Sadafi"
+                  loading="lazy"
+                />
+                <span class="organizer-initials" aria-hidden="true">AS</span>
+              </div>
+              <div class="organizer-body">
+                <p class="organizer-role">Program Chair</p>
+                <h3>Ario Sadafi</h3>
+                <p>Helmholtz Munich</p>
+              </div>
+            </article>
+
+            <article class="organizer-card">
+              <div class="organizer-media">
+                <img
+                  src="assets/organizers/cecilia-di-ruberto.jpg"
+                  alt="Placeholder portrait for Cecilia Di Ruberto"
+                  loading="lazy"
+                />
+                <span class="organizer-initials" aria-hidden="true">CD</span>
+              </div>
+              <div class="organizer-body">
+                <p class="organizer-role">Keynote and Outreach Chair</p>
+                <h3>Cecilia Di Ruberto</h3>
+                <p>University of Cagliari</p>
+              </div>
+            </article>
+
+            <article class="organizer-card">
+              <div class="organizer-media">
+                <img
+                  src="assets/organizers/carsten-marr.jpg"
+                  alt="Placeholder portrait for Carsten Marr"
+                  loading="lazy"
+                />
+                <span class="organizer-initials" aria-hidden="true">CM</span>
+              </div>
+              <div class="organizer-body">
+                <p class="organizer-role">Senior Advisory Chair</p>
+                <h3>Carsten Marr</h3>
+                <p>Helmholtz Munich</p>
+              </div>
+            </article>
+
+            <article class="organizer-card">
+              <div class="organizer-media">
+                <img
+                  src="assets/organizers/ahmed-elsafty.jpg"
+                  alt="Placeholder portrait for Ahmed Elsafty"
+                  loading="lazy"
+                />
+                <span class="organizer-initials" aria-hidden="true">AE</span>
+              </div>
+              <div class="organizer-body">
+                <p class="organizer-role">Clinical and Translational Advisor</p>
+                <h3>Ahmed Elsafty</h3>
+                <p>PathOlOgics, LLC</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="contact">
+        <div class="container">
+          <div class="contact-grid reveal">
+            <div class="section-heading contact-heading">
+              <p class="eyebrow">Contact</p>
+              <h2>Get in touch</h2>
+              <p>
+                For workshop-related inquiries, please contact the
+                corresponding organizer.
+              </p>
+            </div>
+
+            <div class="contact-card">
+              <p class="contact-label">Corresponding organizer</p>
+              <h3>Andrea Loddo</h3>
+              <p>
+                <a href="mailto:andrea.loddo@unica.it">
+                  Andrea Loddo — andrea.loddo@unica.it
+                </a>
+              </p>
+              <p class="contact-extra">
+                <strong>Webmaster:</strong> Luca Zedda
+              </p>
+
+              <details class="contact-details">
+                <summary>Additional organizer contacts</summary>
+                <ul class="contact-list">
+                  <li>
+                    <a href="mailto:luca.zedda@unica.it">
+                      Luca Zedda — luca.zedda@unica.it
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:cecilia.dir@unica.it">
+                      Cecilia Di Ruberto — cecilia.dir@unica.it
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:ario.sadafi@tum.de">
+                      Ario Sadafi — ario.sadafi@tum.de
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:carsten.marr@helmholtz-munich.de">
+                      Carsten Marr — carsten.marr@helmholtz-munich.de
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:aelnady777@hotmail.com">
+                      Ahmed Elsafty — aelnady777@hotmail.com
+                    </a>
+                  </li>
+                </ul>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2 class="footer-title">
+            Toward Reliable AI in Hematology: Robust Red Blood Cell and
+            Parasitemia Analysis
+          </h2>
+          <p>MICCAI 2026 workshop website</p>
+          <p>
+            <a href="mailto:andrea.loddo@unica.it">andrea.loddo@unica.it</a>
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#call-for-papers">Call for Papers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer-note">
+            Workshop website under development. Some details are tentative and
+            will be updated.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
