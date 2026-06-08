@@ -223,6 +223,7 @@ html[data-theme="dark"] .section-soft {
 .timeline-body p,
 .speaker-body p,
 .highlight-card p,
+.guideline-card p,
 .callout-copy p,
 .organizer-card p,
 .contact-card p,
@@ -685,6 +686,7 @@ html[data-theme="dark"] .hero-orbit circle {
 
 .topic-grid,
 .highlight-grid,
+.guideline-grid,
 .speaker-grid,
 .organizer-grid {
   display: grid;
@@ -697,6 +699,7 @@ html[data-theme="dark"] .hero-orbit circle {
 
 .topic-card,
 .highlight-card,
+.guideline-card,
 .speaker-card,
 .organizer-card,
 .contact-card,
@@ -709,6 +712,7 @@ html[data-theme="dark"] .hero-orbit circle {
 
 .topic-card:hover,
 .highlight-card:hover,
+.guideline-card:hover,
 .speaker-card:hover,
 .organizer-card:hover,
 .contact-card:hover,
@@ -737,6 +741,7 @@ html[data-theme="dark"] .hero-orbit circle {
 
 .topic-card h3,
 .highlight-card h3,
+.guideline-card h3,
 .timeline-body h3,
 .speaker-body h3,
 .organizer-card h3,
@@ -779,6 +784,34 @@ html[data-theme="dark"] .hero-orbit circle {
 .highlight-card {
   padding: 1.55rem;
   border-radius: 24px;
+}
+
+.guideline-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.guideline-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.5rem;
+  border-radius: 24px;
+}
+
+.guideline-card a {
+  color: var(--accent-deep);
+  font-weight: 600;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.guideline-label {
+  margin: 0 0 0.65rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .timeline {
@@ -1189,6 +1222,7 @@ html[data-theme="dark"] .organizer-media img {
 
   .topic-grid,
   .highlight-grid,
+  .guideline-grid,
   .speaker-grid,
   .organizer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1203,7 +1237,7 @@ html[data-theme="dark"] .organizer-media img {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1040px) {
   :root {
     --nav-height: 78px;
   }
@@ -1286,6 +1320,7 @@ html[data-theme="dark"] .organizer-media img {
 
   .topic-grid,
   .highlight-grid,
+  .guideline-grid,
   .speaker-grid,
   .organizer-grid {
     grid-template-columns: 1fr;
