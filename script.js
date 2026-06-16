@@ -165,7 +165,7 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 860 && navPanel) {
+  if (window.innerWidth > 1040 && navPanel) {
     closeMenu();
   }
 });
