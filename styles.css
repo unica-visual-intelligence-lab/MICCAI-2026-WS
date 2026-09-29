@@ -39,28 +39,36 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  color-scheme: light;
+  gap: 0.75rem;
 }
 
-html[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #0f161b;
-  --bg-top: #121b21;
-  --bg-elevated: rgba(18, 27, 33, 0.78);
-  --surface: #121c22;
-  --surface-strong: #172228;
-  --surface-soft: #16212a;
-  --text: #e8edf0;
-  --text-soft: #a6b3bb;
-  --heading: #f3f6f8;
-  --border: rgba(180, 193, 201, 0.18);
-  --shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
-  --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.22);
-  --accent: #c85a69;
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 0 0 auto;
+}
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-link img {
+  width: auto;
+  height: 2.8rem;
+  object-fit: contain;
+}
+
+.brand-logo-sig img {
+  height: 2.6rem;
+  color-scheme: light;
+}
   --accent-deep: #ab3d4d;
   --accent-soft: rgba(200, 90, 105, 0.18);
   --accent-glow: rgba(200, 90, 105, 0.18);
+  text-decoration: none;
   --blue-gray: #8ea0aa;
   --blue-gray-soft: #25323a;
   --header-bg: rgba(11, 18, 23, 0.8);
@@ -424,6 +432,43 @@ html[data-theme="dark"] .section-soft {
   display: none;
 }
 
+@media (max-width: 1200px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .nav-panel {
+    position: absolute;
+    top: calc(100% + 0.7rem);
+    left: 1rem;
+    right: 1rem;
+    display: none;
+    padding: 0.8rem;
+    border-radius: 24px;
+    background: var(--menu-panel-bg);
+    border: 1px solid rgba(102, 116, 125, 0.14);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-panel.is-open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-right {
+    gap: 0.55rem;
+  }
+
+  .nav-links a {
+    justify-content: flex-start;
+    border-radius: 16px;
+  }
+}
+
 .menu-toggle span {
   display: block;
   width: 1.2rem;
@@ -500,6 +545,33 @@ html[data-theme="dark"] .announcement-bar {
   max-width: 18ch;
   line-height: 1.02;
   margin-bottom: 1.35rem;
+}
+
+.hero-brand {
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.workshop-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--heading);
+}
+
+.workshop-logo img {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+}
+
+.workshop-logo-name {
+  font-family: "Newsreader", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--heading);
 }
 
 .hero-subtitle {
@@ -654,7 +726,9 @@ html[data-theme="dark"] .visual-grid {
 
 .cell.large {
   width: 8.6rem;
-  height: 8.6rem;
+
+  height: 2rem;
+  color-scheme: light;
 }
 
 .cell.medium {
@@ -1038,6 +1112,19 @@ html[data-theme="dark"] .hero-orbit circle {
   line-height: 1.1;
 }
 
+.sponsor-logo-link {
+  display: block;
+  width: min(14rem, 100%);
+  margin: 0.2rem 0 0.9rem;
+}
+
+.sponsor-logo-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .sponsor-callout p {
   color: var(--text-soft);
 }
@@ -1182,17 +1269,19 @@ html[data-theme="dark"] .callout {
 }
 
 .cfp-detail-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
 
-.cfp-details dt {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
+    display: block;
+    width: min(14rem, 100%);
+    margin: 0.2rem 0 0.9rem;
+  }
+
+  .sponsor-logo-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
 }
 
 .cfp-details dd {
@@ -1545,6 +1634,8 @@ html[data-theme="dark"] .organizer-media img {
   .button,
   .pill {
     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .topic-grid,
@@ -1607,6 +1698,34 @@ html[data-theme="dark"] .organizer-media img {
 
   .brand-subtitle {
     font-size: 0.76rem;
+  }
+
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .brand-logo-link img {
+    height: 2.05rem;
+  }
+
+  .brand-logo-sig img {
+    height: 2rem;
+  }
+
+
+  .sponsor-logo-link {
+    display: block;
+    width: min(14rem, 100%);
+    margin: 0.2rem 0 0.9rem;
+  }
+
+  .sponsor-logo-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .theme-toggle-text {
