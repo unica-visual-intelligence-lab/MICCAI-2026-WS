@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <defs>
+    <linearGradient id="cell" x1="27" y1="28" x2="67" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b63a4d" />
+      <stop offset="1" stop-color="#6f1423" />
+    </linearGradient>
+  </defs>
+  <circle cx="48" cy="48" r="43" fill="#fff8f5" stroke="#8f2332" stroke-width="2" />
+  <ellipse cx="46" cy="49" rx="27" ry="20" transform="rotate(-18 46 49)" fill="url(#cell)" />
+  <ellipse cx="46" cy="49" rx="13" ry="8" transform="rotate(-18 46 49)" fill="#f2d7db" />
+  <path d="M24 43c5-7 13-11 22-12" stroke="#e9aab3" stroke-linecap="round" stroke-width="2" />
+  <path d="M14 69c12 12 32 15 48 8 12-5 20-15 21-28 1-11-5-22-15-28" stroke="#62707b" stroke-linecap="round" stroke-width="2.5" />
+  <circle cx="14" cy="69" r="4" fill="#fff8f5" stroke="#62707b" stroke-width="2.5" />
+  <circle cx="83" cy="49" r="4" fill="#8f2332" stroke="#fff8f5" stroke-width="2" />
+  <circle cx="68" cy="21" r="3.5" fill="#62707b" stroke="#fff8f5" stroke-width="2" />
+</svg>

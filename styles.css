@@ -39,28 +39,36 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  color-scheme: light;
+  gap: 0.75rem;
 }
 
-html[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #0f161b;
-  --bg-top: #121b21;
-  --bg-elevated: rgba(18, 27, 33, 0.78);
-  --surface: #121c22;
-  --surface-strong: #172228;
-  --surface-soft: #16212a;
-  --text: #e8edf0;
-  --text-soft: #a6b3bb;
-  --heading: #f3f6f8;
-  --border: rgba(180, 193, 201, 0.18);
-  --shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
-  --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.22);
-  --accent: #c85a69;
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 0 0 auto;
+}
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-link img {
+  width: auto;
+  height: 2.8rem;
+  object-fit: contain;
+}
+
+.brand-logo-sig img {
+  height: 2.6rem;
+  color-scheme: light;
+}
   --accent-deep: #ab3d4d;
   --accent-soft: rgba(200, 90, 105, 0.18);
   --accent-glow: rgba(200, 90, 105, 0.18);
+  text-decoration: none;
   --blue-gray: #8ea0aa;
   --blue-gray-soft: #25323a;
   --header-bg: rgba(11, 18, 23, 0.8);
@@ -383,7 +391,7 @@ html[data-theme="dark"] .section-soft {
   height: 3rem;
   padding: 0;
   border: 1px solid rgba(102, 116, 125, 0.18);
-  border-radius: 18px;
+  border-radius: 999px;
   background: var(--panel-bg);
   color: var(--heading);
   cursor: pointer;
@@ -422,6 +430,43 @@ html[data-theme="dark"] .section-soft {
 
 .menu-toggle {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .nav-panel {
+    position: absolute;
+    top: calc(100% + 0.7rem);
+    left: 1rem;
+    right: 1rem;
+    display: none;
+    padding: 0.8rem;
+    border-radius: 24px;
+    background: var(--menu-panel-bg);
+    border: 1px solid rgba(102, 116, 125, 0.14);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-panel.is-open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-right {
+    gap: 0.55rem;
+  }
+
+  .nav-links a {
+    justify-content: flex-start;
+    border-radius: 16px;
+  }
 }
 
 .menu-toggle span {
@@ -500,6 +545,33 @@ html[data-theme="dark"] .announcement-bar {
   max-width: 18ch;
   line-height: 1.02;
   margin-bottom: 1.35rem;
+}
+
+.hero-brand {
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.workshop-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--heading);
+}
+
+.workshop-logo img {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+}
+
+.workshop-logo-name {
+  font-family: "Newsreader", serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--heading);
 }
 
 .hero-subtitle {
@@ -654,7 +726,9 @@ html[data-theme="dark"] .visual-grid {
 
 .cell.large {
   width: 8.6rem;
-  height: 8.6rem;
+
+  height: 2rem;
+  color-scheme: light;
 }
 
 .cell.medium {
@@ -881,24 +955,23 @@ html[data-theme="dark"] .hero-orbit circle {
   margin: 0;
   padding: 0;
   list-style: none;
+  color: var(--text-soft);
 }
 
 .topic-list li {
   display: flex;
-  gap: 0.7rem;
   align-items: flex-start;
-  color: var(--text-soft);
+  gap: 0.65rem;
 }
 
 .topic-list li::before {
   content: "";
-  width: 0.58rem;
-  height: 0.58rem;
+  flex: 0 0 0.45rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-top: 0.48rem;
   border-radius: 50%;
-  margin-top: 0.5rem;
-  flex: none;
-  background: linear-gradient(135deg, #c84a60, var(--accent));
-  box-shadow: 0 0 0 0.28rem rgba(143, 35, 50, 0.08);
+  background: var(--accent);
 }
 
 .highlight-grid {
@@ -1036,6 +1109,19 @@ html[data-theme="dark"] .hero-orbit circle {
   font-family: "Newsreader", serif;
   font-size: 1.65rem;
   line-height: 1.1;
+}
+
+.sponsor-logo-link {
+  display: block;
+  width: min(14rem, 100%);
+  margin: 0.2rem 0 0.9rem;
+}
+
+.sponsor-logo-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .sponsor-callout p {
@@ -1182,17 +1268,19 @@ html[data-theme="dark"] .callout {
 }
 
 .cfp-detail-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
 
-.cfp-details dt {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
+    display: block;
+    width: min(14rem, 100%);
+    margin: 0.2rem 0 0.9rem;
+  }
+
+  .sponsor-logo-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
 }
 
 .cfp-details dd {
@@ -1211,6 +1299,44 @@ html[data-theme="dark"] .callout {
 
 .organizer-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.committee-block {
+  margin-top: 4rem;
+}
+
+.committee-heading {
+  margin-bottom: 1.5rem;
+}
+
+.committee-heading h3 {
+  margin: 0;
+  color: var(--heading);
+  font-family: "Newsreader", serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.committee-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.committee-list li {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(102, 116, 125, 0.12);
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  color: var(--heading);
+  font-weight: 600;
 }
 
 .organizer-card {
@@ -1449,7 +1575,8 @@ html[data-theme="dark"] .organizer-media img {
   .highlight-grid,
   .guideline-grid,
   .speaker-grid,
-  .organizer-grid {
+  .organizer-grid,
+  .committee-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1545,13 +1672,16 @@ html[data-theme="dark"] .organizer-media img {
   .button,
   .pill {
     width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .topic-grid,
   .highlight-grid,
   .guideline-grid,
   .speaker-grid,
-  .organizer-grid {
+  .organizer-grid,
+  .committee-list {
     grid-template-columns: 1fr;
   }
 
@@ -1607,6 +1737,34 @@ html[data-theme="dark"] .organizer-media img {
 
   .brand-subtitle {
     font-size: 0.76rem;
+  }
+
+  .brand {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .brand-logo-link img {
+    height: 2.05rem;
+  }
+
+  .brand-logo-sig img {
+    height: 2rem;
+  }
+
+
+  .sponsor-logo-link {
+    display: block;
+    width: min(14rem, 100%);
+    margin: 0.2rem 0 0.9rem;
+  }
+
+  .sponsor-logo-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 
   .theme-toggle-text {
